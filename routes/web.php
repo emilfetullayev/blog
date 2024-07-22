@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Main\IndexController as MainIndexController;
 use App\Http\Controllers\Admin\Main\IndexController as AdminIndexController;
@@ -26,6 +27,11 @@ use App\Http\Controllers\Admin\Post\ShowController as PostShowController;
 use App\Http\Controllers\Admin\Post\EditController as PostEditController;
 use App\Http\Controllers\Admin\Post\UpdateController as PostUpdateController;
 use App\Http\Controllers\Admin\Post\DeleteController as PostDeleteController;
+=======
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomePageController;
+>>>>>>> 1fb30eb95d90b927a3f7eff853e94aa401e0de25
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +44,7 @@ use App\Http\Controllers\Admin\Post\DeleteController as PostDeleteController;
 |
 */
 
+<<<<<<< HEAD
 // Ana sayfa rotası
 Route::get('/', [MainIndexController::class, '__invoke'])->name('home');
 
@@ -83,3 +90,6 @@ Route::delete('/{tag}', [TagDeleteController::class, '__invoke'])->name('tag.del
 });
 
 Auth::routes();
+=======
+Route::get('/',  [HomePageController::class,'index'])->name('index');
+>>>>>>> 1fb30eb95d90b927a3f7eff853e94aa401e0de25
